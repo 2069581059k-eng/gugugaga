@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "version": 2026060301,
+  "name": "NotificationBatcher cloud rules",
+  "changelog": "示例规则：用于演示云端分类更新格式。",
+  "protected": [
+    "验证码",
+    "交易",
+    "物流",
+    "私信"
+  ],
+  "rules": {
+    "promotion": [
+      "营销推广",
+      "活动优惠",
+      "福利中心"
+    ],
+    "genericPush": [
+      "推送通知",
+      "消息推送",
+      "通知推送",
+      "vivo push"
+    ],
+    "news": [
+      "内容资讯",
+      "新闻推送"
+    ]
+  },
+  "appOverrides": {
+    "com.netease.cloudmusic": {
+      "news": [
+        "内容资讯"
+      ],
+      "genericPush": [
+        "推送通知"
+      ],
+      "protected": [
+        "一起听"
+      ]
+    }
+  }
+}
