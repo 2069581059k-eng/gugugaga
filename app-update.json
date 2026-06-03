@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "versionCode": 17,
+  "versionName": "1.16",
+  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-software-update-v116-debug.apk",
+  "sha256": "f09eec4a3e865259c33f2350c8563cedc3b6f11f8005649687a9766b5ccfc6fb",
+  "changelog": [
+    "新增软件本体云端更新",
+    "支持下载 APK 后校验 SHA-256",
+    "通过 Android 系统安装器确认安装"
+  ]
+}
