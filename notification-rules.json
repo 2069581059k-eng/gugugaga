@@ -1,41 +1,1327 @@
 {
   "schema": 1,
-  "version": 2026060301,
+  "version": 2026060402,
   "name": "NotificationBatcher cloud rules",
-  "changelog": "示例规则：用于演示云端分类更新格式。",
-  "protected": [
-    "验证码",
-    "交易",
-    "物流",
-    "私信"
+  "changelog": [
+    "基于本机 616 个通知类别扫描样本扩充分类",
+    "为默认、其他、普通、消息等歧义类别增加应用覆盖",
+    "补充 X、Discord、Telegram、Gmail、Lark、淘宝、微博、网易云、系统组件等常见规则"
   ],
+  "protected": [],
   "rules": {
-    "promotion": [
+    "directMessage": [
+      "私信",
+      "聊天消息",
+      "新消息通知",
+      "即时消息",
+      "会话消息",
+      "群聊",
+      "单聊",
+      "好友消息",
+      "来电",
+      "未接电话",
+      "正在进行的通话",
+      "拨出/正在进行的呼叫",
+      "语音信息",
+      "VoIP",
+      "voice call",
+      "video call",
+      "incoming call",
+      "missed call",
+      "ongoing call",
+      "direct message",
+      "dm message"
+    ],
+    "accountSecurity": [
+      "账号安全",
+      "账户安全",
+      "登录验证",
+      "验证码",
+      "密码",
+      "风控",
+      "紧急警报",
+      "Play 保护",
+      "新设备提醒",
+      "设备提醒",
+      "IT 管理员",
+      "device admin",
+      "emergency alert",
+      "play protect"
+    ],
+    "paymentFinance": [
+      "支付交易",
+      "交易与账号安全",
+      "账单",
+      "退款",
+      "发票",
+      "收款",
+      "付款",
+      "充值",
+      "提现",
+      "还款"
+    ],
+    "orderLogistics": [
+      "订单物流",
+      "交易物流",
+      "订单动态",
+      "物流提醒",
+      "菜鸟通知",
+      "快递",
+      "取件",
+      "包裹",
+      "配送",
+      "签收"
+    ],
+    "travelSchedule": [
+      "日程",
+      "会议提醒",
+      "提醒事项",
+      "闹钟",
+      "闹铃",
+      "秒表",
+      "倒计时",
+      "出行",
+      "行程",
+      "航班",
+      "车票",
+      "酒店",
+      "alarm",
+      "timer",
+      "stopwatch"
+    ],
+    "workStudy": [
+      "DING消息",
+      "钉钉",
+      "飞书",
+      "审批",
+      "待办",
+      "任务",
+      "项目",
+      "文档",
+      "妙记录音",
+      "研究完成",
+      "Research complete"
+    ],
+    "healthDevice": [
+      "健康",
+      "运动状态",
+      "电池",
+      "低电量",
+      "省电",
+      "智能家居",
+      "设备状态",
+      "设备告警",
+      "硬件设备",
+      "蓝牙",
+      "耳机",
+      "数据网络连接",
+      "网络共享",
+      "Cast",
+      "WLAN",
+      "米家"
+    ],
+    "socialInteraction": [
+      "互动消息",
+      "互动",
+      "评论",
+      "回复",
+      "点赞",
+      "赞",
+      "提及",
+      "提到",
+      "关注你",
+      "关注者",
+      "关注了你",
+      "粉丝",
+      "联系人",
+      "与你和你的帖子相关",
+      "Other server notifications",
+      "server notifications",
+      "engagement",
+      "mentions",
+      "followers",
+      "contacts",
+      "reaction"
+    ],
+    "subscription": [
+      "订阅消息",
+      "订阅更新",
+      "关注人动态",
+      "关注的人",
+      "关注",
+      "直播提醒",
+      "动态",
+      "投稿",
+      "新视频",
+      "频道通知",
+      "Forum notifications",
+      "Stage notifications",
+      "Event notifications",
+      "topics",
+      "follow-genres"
+    ],
+    "systemTask": [
+      "系统默认通道",
+      "应用下载通知",
+      "后台服务",
+      "前台服务",
+      "下载",
+      "上传",
+      "同步",
+      "安装",
+      "更新",
+      "存储空间",
+      "空间不足",
+      "USB",
+      "实体键盘",
+      "开发者消息",
+      "APM 警报",
+      "无障碍",
+      "作用域请求",
+      "剪贴板通知",
+      "屏幕截图",
+      "无痕模式",
+      "文件发送",
+      "文件接收",
+      "小米互传",
+      "必需通知",
+      "设置",
+      "提示",
+      "Search box",
+      "Low Priority",
+      "High Priority",
+      "incognito",
+      "required",
+      "setup",
+      "auto-open"
+    ],
+    "mediaNavigation": [
+      "播放",
+      "音乐",
+      "默认分类",
+      "播放器",
+      "媒体",
+      "朗读",
+      "语音模式",
+      "Voice Mode",
+      "Reading aloud",
+      "Player widget",
+      "Grok Voice"
+    ],
+    "gameTool": [
+      "游戏",
+      "游戏中心",
+      "游戏加速",
+      "手游",
+      "加速",
+      "game",
+      "gaming",
+      "booster"
+    ],
+    "newsContent": [
+      "内容资讯",
+      "热点资讯",
+      "微博热点",
+      "社会热点",
+      "热门话题",
+      "新闻推送",
+      "视频推荐",
+      "推荐视频",
+      "你可能会喜欢",
+      "你可能感兴趣",
+      "集锦",
+      "Highlights",
+      "精选内容"
+    ],
+    "promotionMarketing": [
       "营销推广",
+      "广告",
       "活动优惠",
-      "福利中心"
+      "活动通知",
+      "活动提醒",
+      "福利中心",
+      "精彩推荐",
+      "精选推荐",
+      "个性化推荐",
+      "可能感兴趣",
+      "秒杀",
+      "spike",
+      "领券",
+      "红包",
+      "新品",
+      "商品消息",
+      "生活频道消息",
+      "X 专业版",
+      "商业化"
     ],
     "genericPush": [
       "推送通知",
       "消息推送",
       "通知推送",
-      "vivo push"
-    ],
-    "news": [
-      "内容资讯",
-      "新闻推送"
+      "默认通知",
+      "默认消息通知",
+      "一般通知",
+      "其他通知",
+      "未分类",
+      "杂项",
+      "mipush",
+      "Heytap PUSH",
+      "vivo push",
+      "oppo push",
+      "huawei push",
+      "mpaas_default",
+      "JPush_2_0",
+      "JPush_3_7",
+      "miscellaneous",
+      "generic notifications",
+      "other notifications"
     ]
   },
   "appOverrides": {
-    "com.netease.cloudmusic": {
-      "news": [
-        "内容资讯"
+    "android": {
+      "systemTask": [
+        "NETWORK_ALERTS",
+        "DEVELOPER",
+        "APM_ALERTS",
+        "USB",
+        "PHYSICAL_KEYBOARD",
+        "DEVICE_ADMIN_ALERTS",
+        "ACCESSIBILITY_SECURITY_POLICY",
+        "lsposed_module_scope",
+        "TIME",
+        "ALERTS",
+        "RETAIL_MODE",
+        "CAR_MODE",
+        "ACCESSIBILITY_HEARING_DEVICE",
+        "ACCESSIBILITY_MAGNIFICATION",
+        "NETWORK_AVAILABLE"
+      ]
+    },
+    "com.android.systemui": {
+      "healthDevice": [
+        "BAT",
+        "电池"
+      ],
+      "systemTask": [
+        "ALR",
+        "DSK",
+        "HNT",
+        "STP",
+        "id_aggregate",
+        "DSK_FLOAT",
+        "SCN_HEADSUP",
+        "提醒",
+        "存储空间",
+        "提示",
+        "设置",
+        "屏幕截图"
+      ]
+    },
+    "com.android.providers.downloads": {
+      "systemTask": [
+        "waiting",
+        "insufficient_space",
+        "等待中",
+        "空间不足"
+      ]
+    },
+    "com.android.providers.contacts": {
+      "systemTask": [
+        "contactsprovider.silent",
+        "其他"
+      ]
+    },
+    "com.android.mtp": {
+      "systemTask": [
+        "device_notification_channel",
+        "未分类"
+      ]
+    },
+    "com.android.mms": {
+      "directMessage": [
+        "Channel_Msg",
+        "消息类通知"
+      ],
+      "systemTask": [
+        "Mms_Default",
+        "Channel_Foreground_Service",
+        "非消息类通知",
+        "其他"
+      ]
+    },
+    "com.android.phone": {
+      "directMessage": [
+        "voiceMail",
+        "wfc",
+        "alert",
+        "callForward",
+        "语音信息",
+        "WLAN 通话",
+        "来电转接"
+      ],
+      "systemTask": [
+        "satellite",
+        "国家码设置"
+      ]
+    },
+    "com.android.server.telecom": {
+      "directMessage": [
+        "TelecomIncomingCalls",
+        "MiuiTelecomMissedCalls",
+        "TelecomDisconnectedCalls",
+        "TelecomCallBlocking",
+        "MissedCalls",
+        "来电",
+        "未接电话",
+        "通话中断",
+        "来电屏蔽",
+        "勿扰"
+      ],
+      "systemTask": [
+        "TelecomInCallServiceCrash"
+      ]
+    },
+    "com.android.incallui": {
+      "directMessage": [
+        "phone_incall",
+        "电话",
+        "通话"
+      ],
+      "systemTask": [
+        "phone_incall_record",
+        "录音"
+      ]
+    },
+    "com.android.deskclock": {
+      "travelSchedule": [
+        "deskclock_alarm",
+        "deskclock_snooze",
+        "deskclock_stopwatch",
+        "deskclock_timer",
+        "闹铃",
+        "秒表",
+        "倒计时"
+      ]
+    },
+    "com.android.soundrecorder": {
+      "systemTask": [
+        "channel_id_record",
+        "录音"
+      ]
+    },
+    "com.miui.securitycenter": {
+      "healthDevice": [
+        "batteryNoticeNew",
+        "powercenter",
+        "电池",
+        "省电"
+      ],
+      "systemTask": [
+        "antispam",
+        "poweroffNotice",
+        "networkassistant",
+        "骚扰拦截",
+        "关机时间",
+        "网络助手"
+      ]
+    },
+    "com.miui.systemadsolution": {
+      "promotionMarketing": [
+        "msa",
+        "enhancementPushAd"
+      ]
+    },
+    "com.miui.mishare.connectivity": {
+      "systemTask": [
+        "mishare_files_notification",
+        "文件发送",
+        "文件接收",
+        "小米互传"
+      ]
+    },
+    "com.xiaomi.mirror": {
+      "systemTask": [
+        "channel_island",
+        "softap",
+        "connected",
+        "screen_permission_warning",
+        "text_extract",
+        "screen_record_warning"
+      ]
+    },
+    "com.google.android.gms": {
+      "accountSecurity": [
+        "NEW_DEVICE_CHANNEL_ID",
+        "INVITATION_CHANNEL_ID",
+        "新设备提醒",
+        "组邀请"
+      ],
+      "healthDevice": [
+        "mt-notification",
+        "数据网络连接",
+        "Instant Wi-Fi",
+        "Cast"
+      ],
+      "systemTask": [
+        "WELCOME_CHANNEL_ID",
+        "cross-device",
+        "New cross-device features"
+      ]
+    },
+    "com.android.vending": {
+      "accountSecurity": [
+        "play-protect",
+        "Play 保护机制"
+      ],
+      "subscription": [
+        "follow-genres",
+        "您关注的类型"
+      ],
+      "systemTask": [
+        "required",
+        "setup",
+        "auto-open",
+        "open-app-reminders",
+        "必需通知",
+        "设置",
+        "应用自动打开",
+        "打开应用提醒"
+      ]
+    },
+    "com.google.android.gm": {
+      "directMessage": [
+        "attachments",
+        "其他通知",
+        "CALL",
+        "ONGOING_CALL",
+        "MISSED_CALL",
+        "附件",
+        "来电",
+        "未接电话",
+        "^nc_~_misc",
+        "其他"
+      ],
+      "systemTask": [
+        "ONGOING_CALL_STATUS"
+      ]
+    },
+    "com.twitter.android": {
+      "accountSecurity": [
+        "emergency_alerts",
+        "紧急警报"
+      ],
+      "directMessage": [
+        "dm_message",
+        "av_call",
+        "来电",
+        "拨出/正在进行的呼叫"
+      ],
+      "socialInteraction": [
+        "engagement",
+        "people",
+        "关注者和联系人",
+        "与你和你的帖子相关",
+        "spaces",
+        "空间"
+      ],
+      "subscription": [
+        "topics_high_priority",
+        "关注"
+      ],
+      "promotionMarketing": [
+        "ads",
+        "X 专业版"
       ],
       "genericPush": [
-        "推送通知"
+        "generic",
+        "X 通知"
+      ]
+    },
+    "com.discord": {
+      "directMessage": [
+        "mediaConnections",
+        "Voice connected"
       ],
-      "protected": [
+      "socialInteraction": [
+        "other",
+        "Other server notifications",
+        "Other"
+      ],
+      "subscription": [
+        "guildEventLive",
+        "stageLive",
+        "forumThreadCreated",
+        "Event notifications",
+        "Stage notifications",
+        "Forum notifications"
+      ],
+      "newsContent": [
+        "guildHighlights",
+        "集锦"
+      ]
+    },
+    "org.telegram.messenger.web": {
+      "directMessage": [
+        "channel_private",
+        "channel_groups",
+        "private_",
+        "groups_"
+      ],
+      "subscription": [
+        "channel_channels",
+        "channels_"
+      ],
+      "systemTask": [
+        "Other3",
+        "Internal notifications",
+        "silent",
+        "静音"
+      ]
+    },
+    "ru.dahl.messenger": {
+      "systemTask": [
+        "Other3",
+        "Internal notifications"
+      ]
+    },
+    "com.ss.android.lark": {
+      "directMessage": [
+        "vc_ringing_voip",
+        "vc_foreground",
+        "VoIP",
+        "正在进行的通话"
+      ],
+      "workStudy": [
+        "mm_recording",
+        "feed_push",
+        "app_notification",
+        "妙记录音",
+        "应用消息"
+      ],
+      "healthDevice": [
+        "vc_hardware",
+        "硬件设备已连接"
+      ]
+    },
+    "com.alibaba.android.rimet": {
+      "directMessage": [
+        "dt_telephone",
+        "电话"
+      ],
+      "workStudy": [
+        "dt_ding",
+        "DING消息"
+      ]
+    },
+    "com.anthropic.claude": {
+      "directMessage": [
+        "dispatch",
+        "messages you"
+      ],
+      "workStudy": [
+        "compass",
+        "Research complete"
+      ],
+      "mediaNavigation": [
+        "tts_playback",
+        "voice_mode",
+        "Reading aloud",
+        "Voice Mode"
+      ]
+    },
+    "ai.x.grok": {
+      "mediaNavigation": [
+        "grok_voice",
+        "Grok Voice"
+      ],
+      "genericPush": [
+        "com_appboy_default_notification_channel",
+        "Grok"
+      ]
+    },
+    "tv.danmaku.bili": {
+      "socialInteraction": [
+        "互动消息"
+      ],
+      "newsContent": [
+        "内容资讯"
+      ],
+      "promotionMarketing": [
+        "营销 推广",
+        "msa_notification_ad"
+      ],
+      "genericPush": [
+        "重要推送",
+        "Heytap PUSH"
+      ],
+      "systemTask": [
+        "bili_channel_default",
+        "正在使用哔哩哔哩"
+      ]
+    },
+    "com.netease.cloudmusic": {
+      "mediaNavigation": [
+        "netease_music",
+        "默认分类",
         "一起听"
+      ],
+      "newsContent": [
+        "内容资讯",
+        "歌曲、艺人、活动资讯"
+      ],
+      "genericPush": [
+        "Heytap PUSH"
+      ]
+    },
+    "com.sina.weibo": {
+      "directMessage": [
+        "weibo_client_im_push",
+        "即时消息"
+      ],
+      "socialInteraction": [
+        "关注人动态",
+        "互动"
+      ],
+      "newsContent": [
+        "微博热点",
+        "热点资讯",
+        "社会热点"
+      ],
+      "promotionMarketing": [
+        "精彩推荐",
+        "精选推荐",
+        "可能感兴趣",
+        "营销 推广"
+      ],
+      "genericPush": [
+        "local_push_channel",
+        "weibo_push_channel_vibrate",
+        "weibo_push_channel_silent",
+        "weibo_push_channel_sound",
+        "weibo_push_channel_dnd",
+        "消息推送",
+        "其他"
+      ],
+      "mediaNavigation": [
+        "视频后台播放"
+      ]
+    },
+    "com.zhiliaoapp.musically": {
+      "directMessage": [
+        "im_push",
+        "私信"
+      ],
+      "socialInteraction": [
+        "mention_push",
+        "digg_push",
+        "提及",
+        "赞"
+      ],
+      "newsContent": [
+        "recommend_video",
+        "你可能会喜欢的视频"
+      ],
+      "genericPush": [
+        "push",
+        "other_channel"
+      ]
+    },
+    "com.eg.android.alipaygphone": {
+      "accountSecurity": [
+        "账号安全",
+        "交易与账号安全"
+      ],
+      "paymentFinance": [
+        "交易",
+        "支付"
+      ],
+      "orderLogistics": [
+        "订单物流"
+      ],
+      "subscription": [
+        "订阅消息"
+      ],
+      "promotionMarketing": [
+        "活动通知",
+        "热门活动",
+        "最新优惠",
+        "功能推荐"
+      ]
+    },
+    "com.taobao.taobao": {
+      "directMessage": [
+        "聊天消息",
+        "客服聊天"
+      ],
+      "orderLogistics": [
+        "交易物流",
+        "物流动态",
+        "退换货动态"
+      ],
+      "subscription": [
+        "服务通知",
+        "主动设置",
+        "订阅"
+      ],
+      "promotionMarketing": [
+        "营销 推广",
+        "活动优惠",
+        "每日推荐"
+      ],
+      "systemTask": [
+        "linkdownloader",
+        "应用下载通知"
+      ]
+    },
+    "com.xunmeng.pinduoduo": {
+      "directMessage": [
+        "chat",
+        "一般通知"
+      ],
+      "promotionMarketing": [
+        "spike",
+        "秒杀",
+        "其他"
+      ]
+    },
+    "com.cainiao.wireless": {
+      "orderLogistics": [
+        "菜鸟通知",
+        "channel_normal"
+      ]
+    },
+    "com.ct.client": {
+      "orderLogistics": [
+        "ORDER",
+        "订单物流"
+      ],
+      "systemTask": [
+        "CHANNEL_RUNNING",
+        "翼相连"
+      ],
+      "genericPush": [
+        "CHANNEL_MSG",
+        "JPush_2_0",
+        "JPush_3_7",
+        "mpaas_default",
+        "消息",
+        "不重要",
+        "普通",
+        "Default"
+      ]
+    },
+    "com.xiaomi.smarthome": {
+      "healthDevice": [
+        "JPush_2_0",
+        "JPush_3_7",
+        "普通",
+        "不重要",
+        "米家",
+        "智能家居"
+      ]
+    },
+    "com.baseus.intelligent": {
+      "healthDevice": [
+        "JPush_2_0",
+        "JPush_3_7",
+        "普通",
+        "不重要",
+        "设备"
+      ]
+    },
+    "com.hypergryph.endfield": {
+      "gameTool": [
+        "JPush_3_7",
+        "普通",
+        "HyperChannel",
+        "HyperChannel_01"
+      ]
+    },
+    "com.kurogame.mingchao": {
+      "gameTool": [
+        "default",
+        "Default",
+        "默认通知"
+      ]
+    },
+    "com.tencent.gamehelper.smoba": {
+      "gameTool": [
+        "xg-channle-id",
+        "message"
+      ]
+    },
+    "com.tencent.jkchess": {
+      "gameTool": [
+        "xg-channle-id",
+        "message",
+        "Heytap PUSH",
+        "金铲铲之战"
+      ]
+    },
+    "com.xiaomi.gamecenter": {
+      "gameTool": [
+        "normal_notification_id",
+        "消息"
+      ]
+    },
+    "com.tencent.mobileqq": {
+      "directMessage": [
+        "即时消息",
+        "CHANNEL_ID_SHOW_BADGE",
+        "普通消息"
+      ],
+      "subscription": [
+        "好友上线提醒"
+      ],
+      "systemTask": [
+        "CHANNEL_ID_HIDE_BADGE",
+        "通知栏显示QQ图标"
+      ],
+      "genericPush": [
+        "CHANNEL_ID_OTHER",
+        "其它通知",
+        "系统推送"
+      ]
+    },
+    "com.tencent.mm": {
+      "directMessage": [
+        "message_channel",
+        "new message",
+        "音视频通话"
+      ],
+      "systemTask": [
+        "reminder_channel",
+        "下载等场景"
+      ]
+    },
+    "com.google.android.youtube": {
+      "mediaNavigation": [
+        "从电视发送"
+      ],
+      "systemTask": [
+        "反馈"
+      ],
+      "newsContent": [
+        "generic_notifications"
+      ]
+    },
+    "com.coolapk.market": {
+      "socialInteraction": [
+        "消息通知"
+      ]
+    },
+    "com.baidu.input_mi": {
+      "systemTask": [
+        "HINT_NOTI",
+        "CLIPBOARD_NOTI",
+        "提醒",
+        "剪贴板通知"
+      ],
+      "genericPush": [
+        "MESSAGE_NOTI",
+        "消息通知"
+      ]
+    },
+    "com.xiaomi.market": {
+      "promotionMarketing": [
+        "消息",
+        "其他"
+      ]
+    },
+    "com.miui.gallery": {
+      "systemTask": [
+        "com.miui.gallery.hide",
+        "应用消息"
+      ]
+    },
+    "com.xunlei.downloadprovider": {
+      "systemTask": [
+        "xl_main_app_default",
+        "默认通知",
+        "消息通知"
+      ]
+    },
+    "com.deniscerri.ytdl": {
+      "systemTask": [
+        "杂项"
+      ]
+    },
+    "com.termux": {
+      "systemTask": [
+        "Low Priority",
+        "High Priority",
+        "notification_channel_low",
+        "notification_channel_high"
+      ]
+    },
+    "app.mihon": {
+      "systemTask": [
+        "common_channel",
+        "library_errors_channel",
+        "incognito_mode_channel",
+        "通用",
+        "错误",
+        "无痕模式"
+      ]
+    },
+    "jp.pxv.android": {
+      "newsContent": [
+        "其他"
+      ]
+    },
+    "ru.yandex.searchplugin": {
+      "systemTask": [
+        "searchlib_channel",
+        "Search box"
+      ],
+      "workStudy": [
+        "sprav_tycoon_premoderation",
+        "sprav_review_tycoon",
+        "Business",
+        "Directory"
+      ],
+      "accountSecurity": [
+        "passport",
+        "Family"
+      ],
+      "mediaNavigation": [
+        "player",
+        "Player widget"
+      ],
+      "travelSchedule": [
+        "Visited places"
+      ],
+      "genericPush": [
+        "miscellaneous_notification_channel_id",
+        "Other"
+      ]
+    },
+    "com.ss.android.ugc.aweme": {
+      "directMessage": [
+        "100583",
+        "重要消息"
+      ],
+      "genericPush": [
+        "114282",
+        "custom_silent",
+        "特别通知",
+        "静默通知"
+      ],
+      "systemTask": [
+        "update_notification",
+        "抖音"
+      ]
+    },
+    "com.openai.chatgpt": {
+      "accountSecurity": [
+        "account",
+        "帐户"
+      ],
+      "workStudy": [
+        "codex",
+        "Codex"
+      ],
+      "systemTask": [
+        "usage",
+        "使用情况"
+      ]
+    },
+    "com.microsoft.office.outlook": {
+      "systemTask": [
+        "v2.in_app_support",
+        "v2.info",
+        "应用内支持",
+        "信息"
+      ]
+    },
+    "com.miui.screenrecorder": {
+      "systemTask": [
+        "screenrecorder.start",
+        "screenrecorder.stop",
+        "屏幕录制",
+        "录制完成通知"
+      ]
+    },
+    "com.android.traceur": {
+      "systemTask": [
+        "trace-is-being-recorded",
+        "system-tracing",
+        "正在录制轨迹",
+        "正在保存轨迹"
+      ]
+    },
+    "com.miui.video": {
+      "mediaNavigation": [
+        "mivideo_airplay",
+        "投屏"
+      ],
+      "genericPush": [
+        "mivideo_channel_common",
+        "常规通知"
+      ]
+    },
+    "ru.zdevs.zarchiver": {
+      "systemTask": [
+        "za_d",
+        "za_m",
+        "Notification",
+        "Message"
+      ]
+    },
+    "com.xiaomi.mi_connect_service": {
+      "healthDevice": [
+        "NetBus",
+        "Continuity"
+      ],
+      "systemTask": [
+        "hide_foreground",
+        "persistent"
+      ]
+    },
+    "app.maomiav.com": {
+      "mediaNavigation": [
+        "Maomi Voice Player",
+        "MaomiPlayer"
+      ],
+      "genericPush": [
+        "JPush_4_7",
+        "重要"
+      ]
+    },
+    "com.quark.browser": {
+      "mediaNavigation": [
+        "cd_media_player_channel_v2",
+        "网盘视频控制"
+      ],
+      "systemTask": [
+        "CLOUD_DRIVE",
+        "网盘"
+      ]
+    },
+    "com.tencent.qqmusic": {
+      "directMessage": [
+        "artist_chat",
+        "Weverse DM"
+      ],
+      "promotionMarketing": [
+        "bubble",
+        "bubble推送"
+      ]
+    },
+    "li.songe.gkd": {
+      "systemTask": [
+        "GKD",
+        "保存快照通知"
+      ]
+    },
+    "com.miui.voiceassist": {
+      "systemTask": [
+        "voiceassistforeground",
+        "重要通知"
+      ]
+    },
+    "com.android.shell": {
+      "systemTask": [
+        "shell_cmd",
+        "Shell command"
+      ]
+    },
+    "com.miui.micloudsync": {
+      "systemTask": [
+        "micloud_notification_channel",
+        "micloud_notification_channel_name"
+      ]
+    },
+    "com.github.metacubex.clash.meta": {
+      "systemTask": [
+        "profile_result_channel",
+        "配置文件处理结果"
+      ]
+    },
+    "com.newcapec.mobile.ncp": {
+      "genericPush": [
+        "Default"
+      ]
+    },
+    "com.uptodown": {
+      "genericPush": [
+        "CHANNEL_ID_UPTODOWN",
+        "Uptodown App Store"
+      ]
+    },
+    "com.miui.cloudbackup": {
+      "systemTask": [
+        "ID_NOTIFICATION_CHANNEL_REMIND",
+        "提醒类"
+      ]
+    },
+    "com.xiaomi.macro": {
+      "systemTask": [
+        "MiMacro",
+        "com.xiaomi.macro"
+      ]
+    },
+    "com.baidu.netdisk": {
+      "systemTask": [
+        "网盘通知",
+        "100001"
+      ]
+    },
+    "com.tencent.tmgp.pubgmhd": {
+      "gameTool": [
+        "和平精英",
+        "Heytap PUSH"
+      ]
+    },
+    "com.miui.contentextension": {
+      "systemTask": [
+        "Taplus"
+      ]
+    },
+    "com.xiaomi.shop": {
+      "promotionMarketing": [
+        "主动智能推送",
+        "145678"
+      ]
+    },
+    "com.xiaomi.finddevice": {
+      "accountSecurity": [
+        "开启查找",
+        "default"
+      ]
+    },
+    "com.miui.bugreport": {
+      "systemTask": [
+        "bugreport_channel_id",
+        "用户反馈"
+      ]
+    },
+    "com.byyoung.setting": {
+      "systemTask": [
+        "轻量级通知",
+        "应用通知"
+      ]
+    },
+    "com.hpbr.bosszhipin": {
+      "systemTask": [
+        "channel_id_upgrade",
+        "升级"
+      ]
+    },
+    "com.miui.voicetrigger": {
+      "systemTask": [
+        "voice_trigger"
+      ]
+    },
+    "com.google.android.googlequicksearchbox": {
+      "systemTask": [
+        "搜索",
+        "有关您搜索内容的通知"
+      ]
+    },
+    "com.xiaomi.aiasst.vision": {
+      "systemTask": [
+        "AiToolboxFs",
+        "ai_toolbox_fs"
+      ]
+    },
+    "net.wifi.popo": {
+      "systemTask": [
+        "fastvpn_openvpn_net"
+      ]
+    },
+    "com.android.thememanager": {
+      "systemTask": [
+        "主题壁纸",
+        "theme_manager"
+      ]
+    },
+    "com.miui.huanji": {
+      "systemTask": [
+        "小米换机",
+        "MiMover"
+      ]
+    },
+    "com.miui.misound": {
+      "mediaNavigation": [
+        "声音助手",
+        "misound_assist"
+      ]
+    },
+    "com.iflytek.inputmethod.miui": {
+      "systemTask": [
+        "应用通知",
+        "iFlytekIme"
+      ]
+    },
+    "com.android.networkstack": {
+      "systemTask": [
+        "connected_note",
+        "网络包含场地信息页面"
+      ]
+    },
+    "com.jingdong.app.mall": {
+      "promotionMarketing": [
+        "京东通知消息",
+        "6181"
+      ]
+    },
+    "com.miui.weather2": {
+      "travelSchedule": [
+        "weather_alert_channel_id",
+        "预警"
+      ]
+    },
+    "bin.mt.plus": {
+      "systemTask": [
+        "终端模拟器",
+        "MTerm"
+      ]
+    },
+    "com.android.permissioncontroller": {
+      "accountSecurity": [
+        "权限提醒",
+        "permission reminders"
+      ]
+    },
+    "com.android.providers.media.module": {
+      "systemTask": [
+        "native_transcode_alert_channel",
+        "转码通知"
+      ]
+    },
+    "com.kugou.android.lite": {
+      "mediaNavigation": [
+        "酷狗概念版消息",
+        "kg_lite_normal"
+      ]
+    },
+    "com.miui.notes": {
+      "systemTask": [
+        "AiTextWidget",
+        "ai_text_widget"
+      ]
+    },
+    "com.android.chrome": {
+      "systemTask": [
+        "浏览器",
+        "browser"
+      ]
+    },
+    "com.tencent.weread": {
+      "newsContent": [
+        "微信读书",
+        "channel_weread"
+      ]
+    },
+    "com.miui.screenshot": {
+      "systemTask": [
+        "SCN"
+      ]
+    },
+    "com.android.htmlviewer": {
+      "systemTask": [
+        "com_miui_htmlViewer_channel"
       ]
     }
   }

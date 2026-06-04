@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "versionCode": 18,
-  "versionName": "1.17",
-  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-hidden-update-url-v117-debug.apk",
-  "sha256": "bcab9fca500afe76399e20f592b9f4f890f0eec40b5eda558f43250ad51b4cdc",
+  "versionCode": 19,
+  "versionName": "1.18",
+  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-deep-channel-rules-v118-debug.apk",
+  "sha256": "e1075ae65b1ee3b990fb234a91077e8e80708cc328b8d32c200261ae1ab0c2ea",
   "changelog": [
-    "隐藏云端规则和软件更新地址",
-    "云端规则更新改为固定入口",
-    "软件更新改为固定入口"
+    "深度扩充通知类别分类库",
+    "云端应用覆盖规则支持匹配通知通道 ID",
+    "按本机 616 个通知类别样本优化未识别分类"
   ]
 }
