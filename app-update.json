@@ -1,12 +1,13 @@
 {
   "schema": 1,
-  "versionCode": 20,
-  "versionName": "1.19",
-  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-classification-fix-v119-debug.apk",
-  "sha256": "d2107be9994202d45cac0a4fe651db297e39b373dad7d89f6503066fcc9dd7ec",
+  "versionCode": 21,
+  "versionName": "1.20",
+  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-auto-update-v120-debug.apk",
+  "sha256": "ad72b1753e545626f88f1ea5bd53abec48bb0ee7d309eedc632b5217b235ada1",
   "changelog": [
-    "修复支付宝等应用名触发的误分类",
-    "云端覆盖规则不再用应用名参与类别匹配",
-    "云端规则冲突时优先采用更具体的长关键词"
+    "新增启动后自动检查软件更新",
+    "首页发现新版时自动显示更新提示",
+    "修复未知来源授权后需要重新下载的问题",
+    "优化安装确认回调，减少安装器无响应或重复打开"
   ]
 }
