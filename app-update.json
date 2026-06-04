@@ -1,13 +1,14 @@
 {
   "schema": 1,
-  "versionCode": 21,
-  "versionName": "1.20",
-  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-auto-update-v120-debug.apk",
-  "sha256": "ad72b1753e545626f88f1ea5bd53abec48bb0ee7d309eedc632b5217b235ada1",
+  "versionCode": 22,
+  "versionName": "1.21",
+  "updatedAt": "2026-06-04 16:29",
+  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-update-times-v121-debug.apk",
+  "sha256": "a6f66ee70fba0700ea643d7241eeb5f063757038c1470e0b36923f44343ad738",
   "changelog": [
-    "新增启动后自动检查软件更新",
-    "首页发现新版时自动显示更新提示",
-    "修复未知来源授权后需要重新下载的问题",
-    "优化安装确认回调，减少安装器无响应或重复打开"
+    "首页显示云端规则发布时间和本机更新时间",
+    "首页显示软件上次检查时间、云端版本和新版更新时间",
+    "软件更新弹窗和首页新版提示增加新版更新时间",
+    "兼容 updatedAt、publishedAt、releasedAt、date 等云端时间字段"
   ]
 }

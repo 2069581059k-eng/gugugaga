@@ -1,6 +1,7 @@
 {
   "schema": 1,
   "version": 2026060403,
+  "updatedAt": "2026-06-04 16:29",
   "name": "NotificationBatcher cloud rules",
   "changelog": [
     "基于本机 616 个通知类别扫描样本扩充分类",
