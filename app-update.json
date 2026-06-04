@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "versionCode": 22,
-  "versionName": "1.21",
-  "updatedAt": "2026-06-04 16:29",
-  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-update-times-v121-debug.apk",
-  "sha256": "a6f66ee70fba0700ea643d7241eeb5f063757038c1470e0b36923f44343ad738",
+  "versionCode": 23,
+  "versionName": "1.22",
+  "updatedAt": "2026-06-04 16:55",
+  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-soft-anime-x-icon-v122-debug.apk",
+  "sha256": "a239f56153166175ad3d338d10261b282ebf925f05429452d4ace95e5cd0e220",
   "changelog": [
-    "首页显示云端规则发布时间和本机更新时间",
-    "首页显示软件上次检查时间、云端版本和新版更新时间",
-    "软件更新弹窗和首页新版提示增加新版更新时间",
-    "兼容 updatedAt、publishedAt、releasedAt、date 等云端时间字段"
+    "应用图标更换为参考画风的软萌厚涂二次元图标",
+    "保留双手 X 姿势，突出关闭/拦截通知的含义",
+    "减少通知卡、齿轮等多余元素，让图标更简洁",
+    "继续保留首页云端规则与软件更新时间显示"
   ]
 }
