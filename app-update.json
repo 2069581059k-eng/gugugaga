@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "versionCode": 19,
-  "versionName": "1.18",
-  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-deep-channel-rules-v118-debug.apk",
-  "sha256": "e1075ae65b1ee3b990fb234a91077e8e80708cc328b8d32c200261ae1ab0c2ea",
+  "versionCode": 20,
+  "versionName": "1.19",
+  "apkUrl": "https://raw.githubusercontent.com/2069581059k-eng/gugugaga/main/NotificationBatcher-classification-fix-v119-debug.apk",
+  "sha256": "d2107be9994202d45cac0a4fe651db297e39b373dad7d89f6503066fcc9dd7ec",
   "changelog": [
-    "深度扩充通知类别分类库",
-    "云端应用覆盖规则支持匹配通知通道 ID",
-    "按本机 616 个通知类别样本优化未识别分类"
+    "修复支付宝等应用名触发的误分类",
+    "云端覆盖规则不再用应用名参与类别匹配",
+    "云端规则冲突时优先采用更具体的长关键词"
   ]
 }

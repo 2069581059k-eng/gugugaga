@@ -1,11 +1,12 @@
 {
   "schema": 1,
-  "version": 2026060402,
+  "version": 2026060403,
   "name": "NotificationBatcher cloud rules",
   "changelog": [
     "基于本机 616 个通知类别扫描样本扩充分类",
     "为默认、其他、普通、消息等歧义类别增加应用覆盖",
-    "补充 X、Discord、Telegram、Gmail、Lark、淘宝、微博、网易云、系统组件等常见规则"
+    "补充 X、Discord、Telegram、Gmail、Lark、淘宝、微博、网易云、系统组件等常见规则",
+    "配合 1.19 修复应用名触发的误分类问题"
   ],
   "protected": [],
   "rules": {
